@@ -1,36 +1,6 @@
 <footer class="wrapper site-footer h-card">
   <data class="u-url" href="{{ "/" | relative_url }}"></data>
 
-  {% comment %} <div class="footer-col-wrapper">
-    <div class="footer-col">
-      <p class="feed-subscribe">
-        <a href="{{ site.feed.path | default: 'feed.xml' | absolute_url }}">
-          <svg class="svg-icon orange">
-            <use xlink:href="{{ 'assets/minima-social-icons.svg#rss' | relative_url }}"></use>
-          </svg>
-          <span>Subscribe</span>
-        </a>
-      </p>
-      {%- if site.author %}
-        <ul class="contact-list">
-          {% if site.author.name -%}
-            <li class="p-name">{{ site.author.name | escape }}</li>
-          {% endif -%}
-          {% if site.author.email -%}
-            <li>
-              <a class="u-email" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>
-            </li>
-          {%- endif %}
-        </ul>
-      {%- endif %}
-    </div>
-
-  </div>
-
-  <div class="social-links">
-    {%- include social.html -%}
-  </div> {% endcomment %}
-
   <div class="footer-description">
     <p>{{ site.description | escape }}</p>
   </div>
@@ -48,36 +18,63 @@
             </a>
           </li>
         {% endfor %}
+
+        <li>
+          RSS Feeds 
+        </li>
+
+        <li>
+          iCalendar Feeds 
+        </li>
+
+        <li>
+          About 
+        </li>
       </ul>
     </div>
 
     <div>
       <h3>Community</h3>
       <ul>
-        {% for category in site.categories %}
-          {% assign slugified = category | first | slugify %}
-          {% assign path = '/category/' %}
-          <li>
-            <a href="{{ '/category/' | append:slugified | append: /index.html | relative_url}}">
-              {{- category | first -}}
-            </a>
-          </li>
-        {% endfor %}
+        <li>
+          Community game night
+        </li>
+        <li>
+          Guides
+        </li>
+        <li>
+          Guides
+        </li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>Contributions</h3>
+      <ul>
+        <li>
+          Campaign/Co-op
+        </li>
+        <li>
+          Maps
+        </li>
+        <li>
+          Mods
+        </li>
       </ul>
     </div>
 
     <div>
       <h3>Contributing</h3>
       <ul>
-        {% for category in site.categories %}
-          {% assign slugified = category | first | slugify %}
-          {% assign path = '/category/' %}
-          <li>
-            <a href="{{ '/category/' | append:slugified | append: /index.html | relative_url}}">
-              {{- category | first -}}
-            </a>
-          </li>
-        {% endfor %}
+        <li>
+          Teams
+        </li>
+        <li>
+          Association
+        </li>
+        <li>
+          Patreon
+        </li>
       </ul>
     </div>
   </div>
