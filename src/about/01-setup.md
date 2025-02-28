@@ -8,8 +8,6 @@ image:
   alt: A siege of Cybran amphibious units against a Seraphim base.
 ---
 
-{% toc %}
-
 # Accounts and tooling
 
 To contribute you need various accounts and tooling. The accounts are mandatory but the tooling is entirely a suggestion. With the suggested tooling it will work and the community can provide support when necessary.
