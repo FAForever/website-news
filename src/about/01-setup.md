@@ -29,7 +29,7 @@ You'll need the following tools to interact with GitHub and run the website on y
 
 To run the website on your computer, you'll also need:
 
-- [Docker Desktop)](https://www.docker.com/products/docker-desktop/): A tool that automatically sets up everything needed to build and view the website on your device.
+- [Docker Desktop)](https://www.docker.com/products/docker-desktop/): A tool that automatically sets up everything needed to build and view the website on your device. (This will require you to turn on CPU Virtulisation to work, Consolt your Motherboard manual to fine out what it is called as it diffrent for Intel & AMD Platforms.)
 
 _Additional step for Windows users:_
 
@@ -41,7 +41,7 @@ These tools are optional but can make editing the website easier:
 
 - [Visual Studio Code](https://code.visualstudio.com/): A user-friendly text editor that makes it easier to work with website files.
 
-## Installing on Ubuntu
+## Optional - Installing on Ubuntu
 
 Installing software on Linux is sometimes trivial and sometimes... heartbreaking. If you're a Linux user and you're stuck then here's some help. We assume that you use the Ubuntu distribution.
 
