@@ -29,7 +29,9 @@ You'll need the following tools to interact with GitHub and run the website on y
 
 To run the website on your computer, you'll also need:
 
-- [Docker Desktop)](https://www.docker.com/products/docker-desktop/): A tool that automatically sets up everything needed to build and view the website on your device. (This will require you to turn on CPU Virtulisation to work, Consolt your Motherboard manual to fine out what it is called as it diffrent for Intel & AMD Platforms.)
+- [Docker Desktop)](https://www.docker.com/products/docker-desktop/): A tool that automatically sets up everything needed to build and view the website on your device.
+
+Note: Docker Desktop requires CPU virtualisation to be enabled. Consult the manual of your motherboard if it is disabled.
 
 _Additional step for Windows users:_
 
