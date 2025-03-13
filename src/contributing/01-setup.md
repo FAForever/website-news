@@ -1,11 +1,11 @@
 ---
 layout: page
 title: Setup of a development environment
-permalink: /about/01-setup
+permalink: /contributing/01-setup
 
 image:
-  path: assets/images/2025/tournament-event-01-2024.png
-  alt: A siege of Cybran amphibious units against a Seraphim base.
+  path: assets/images/default/default-contributing-thumbnail.png
+  alt: A series of engineers of all factions are assisting to upgrade a Cybran land factory.
 ---
 
 # Accounts and tooling
@@ -88,7 +88,7 @@ Launch GitHub Desktop. Make sure that you are logged in with the GitHub account 
 
 Navigate to your fork on GitHub in the browser. Click on the green `<> code` button. In the popup, make sure the `HTTPS` tab is open. Copy the URL to the clipboard.
 
-![test](/assets/images/about/github-clone-01.png)
+![test](/assets/images/contributing/github-clone-01.png)
 
 In GitHub Desktop, navigate in the top bar menu navigate to `File -> Clone repository...`. In the popup, make sure the `URL` tab is open. Paste the URL you just copied into the `URL or username/repository` field. Then choose a location where you want to download and store the repository on your device. Note that the repository may grow to several gigabytes as time passes. Click on `Clone`. Once the cloning procedure is complete another popup asks you how you intend to use the project. Select `To contribute to the parent project` and click on `Continue`.
 

@@ -1,11 +1,11 @@
 ---
 layout: page
-title: Appendix - IcoMoon
-permalink: /about/appendix-icomoon
+title: How we use IcoMoon
+permalink: /contributing/icomoon
 
 image:
-    path: assets/images/2025/tournament-event-01-2024.png
-    alt: A siege of Cybran amphibious units against a Seraphim base.
+  path: assets/images/default/default-contributing-thumbnail.png
+  alt: A series of engineers of all factions are assisting to upgrade a Cybran land factory.
 ---
 
 # IcoMoon

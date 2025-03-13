@@ -1,11 +1,11 @@
 ---
 layout: page
-title: Appendix - use of images
-permalink: /about/appendix-images
+title: How we work with images
+permalink: /contributing/images-and-thumbnails
 
 image:
-    path: assets/images/2025/tournament-event-01-2024.png
-    alt: A siege of Cybran amphibious units against a Seraphim base.
+  path: assets/images/default/default-contributing-thumbnail.png
+  alt: A series of engineers of all factions are assisting to upgrade a Cybran land factory.
 ---
 
 Images spark the imagination. But they can also be a source of frustration. With this article we streamline how we work with images and what the specifications for images are. Unlike a choice of words, these specifications are not up to debate. 
@@ -47,3 +47,5 @@ These guidelines improve the accessibility of the website. As an example, embedd
 - [img tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img)
 - [source tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/source)
 - [picture tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture)
+
+screen

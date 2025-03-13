@@ -1,18 +1,18 @@
 ---
 layout: page
 title: How to add a news item
-permalink: /about/02-add-a-news-item
+permalink: /contributing/02-add-a-news-item
 
 image:
-  path: assets/images/2025/tournament-event-01-2024.png
-  alt: A siege of Cybran amphibious units against a Seraphim base.
+  path: assets/images/default/default-contributing-thumbnail.png
+  alt: A series of engineers of all factions are assisting to upgrade a Cybran land factory.
 ---
 
 In this article you'll learn everything you need to create a news item. We'll discuss how to configure a news item.
 
-We assume that you have followed the [setup guide](/about/01-setup) and that as a result of that you have a working development environment on your device. We also assume that you use [Visual Studio Code]() as your editor. If you're unfamiliar with the editor then you can read up more about it in the appendix:
+We assume that you have followed the [setup guide](/contributing/01-setup) and that as a result of that you have a working development environment on your device. We also assume that you use [Visual Studio Code]() as your editor. If you're unfamiliar with the editor then you can read up more about it in the appendix:
 
-- [Appendix - Introduction to Visual Studio Code](/about/appendix-vsc)
+- [Appendix - Introduction to Visual Studio Code](/contributing/visual-studio-code)
 
 # Autonomy of a news item
 
@@ -59,7 +59,7 @@ event: # only applies to news items with a date, like a meeting or a tournament
 
 The image field is a YAML object. The indenting shows that it has a `path` and an `alt` field. The `alt` field is an alternative description of the image. This is important for accessibility reasons. The path field is the relative path that starts from the `src` folder. All images should be in the `assets/images` folder, or a subfolder in `assets/images`. If you're unfamiliar about how images work in this repository then you can read up more about it in the appendix:
 
-- [Appendix - about images](/about/appendix-images)
+- [Appendix - about images](/contributing/images-and-thumbnails)
 
 ## Content of a news item
 
