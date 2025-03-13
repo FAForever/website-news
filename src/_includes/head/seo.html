@@ -1,0 +1,29 @@
+{% comment %} 
+
+Tooling to debug:
+
+- https://cards-dev.x.com/validator/
+- https://developers.facebook.com/tools/debug/ (requires Facebook login)
+- https://www.linkedin.com/post-inspector/
+- https://developers.google.com/search/docs/appearance/structured-data
+
+Note that the tooling only works on what we published, you can't use it
+for debugging your localhost :).
+
+{% endcomment %}
+
+{% if page.title %}
+    <title> {{ site.title }} - {{ page.title }} </title>
+{% else %}
+    <title> {{ site.title }} </title>
+{% endif %}
+
+{% assign url = page.url | default: site.url | absolute_url %}
+
+<link rel="canonical" href="{{ url }}">
+<meta name="robots" content="index, follow">
+
+{%- include head/seo/twitter.html -%}
+{%- include head/seo/opengraph.html -%}
+{%- include head/seo/schema.html -%}
+{%- include head/seo/verification.html -%}

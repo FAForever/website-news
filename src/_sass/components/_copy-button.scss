@@ -63,8 +63,4 @@
     opacity: 1;
     animation: moveUpFadeOut 1s linear;
   }
-
-  @media (max-width: $on-medium) {
-    display: none;
-  }
 }

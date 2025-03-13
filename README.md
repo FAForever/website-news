@@ -15,6 +15,9 @@ This repository contains the source of a proposal for an alternative news hub fo
   - [jekyll-transcode-image-filters](https://github.com/Garanas/jekyll-transcode-image-filters): Plugin to help with converting images to browser friendly formats
   - [jekyll-icalendar-feed](https://github.com/Garanas/jekyll-icalendar-feed): Plugin to help with generating an iCalendar (RFC5545) feed of our content
 
+- [Web Share API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Share_API): A browser API that makes it easier to share content
+- [Clipboard API](https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API): A browser API that makes it easier to copy content to the clipboard. This is used as a fallback if the Web Share API is not available.
+
 ### CI/CD
 
 - [Node Package Manager](https://nodejs.org/en/download/package-manager)

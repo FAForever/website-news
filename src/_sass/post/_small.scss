@@ -1,3 +1,7 @@
+@use "skins/auto" as skin;
+@use "mixins" as mixins;
+@use "variables" as variables;
+
 .post-small-item-list-container {
   grid-column: breakout-start / breakout-end;
   grid-row: 2/2;
@@ -5,24 +9,18 @@
   margin: 0;
   list-style: none;
 
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
   gap: 1em;
-
-  @media (min-width: $on-medium) {
-    padding: 1em;
-  }
 }
 
 .post-small-item-container {
-  flex-grow: 1;
-  flex-shrink: 1;
-
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   align-content: flex-start;
-  gap: 0.5rem 1rem;
+
+  height: 100%;
 
   &:focus-within {
     border: 1px solid var(--minima-border-color-02);
@@ -30,59 +28,83 @@
 }
 
 .post-small-text-container {
-  display: flex;
-  flex-direction: row;
-
-  padding: 1em;
-
   flex-grow: 3;
-  flex-shrink: 1;
-  flex-basis: 400px;
+
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+padding: 1em;
 }
 
 .post-small-text-body-container {
   display: flex;
+  justify-content: space-between;
   flex-direction: column;
   gap: 0.5rem 1rem;
 }
 
+.post-small-title {
+  margin: 0;
+}
+
+.post-small-link {
+}
+
 .post-small-header {
-  margin: 0
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .post-small-excerpt {
-  margin: 0
+  margin: 0;
 }
 
 .post-small-image-container {
-  position: relative;
-
-  flex-grow: 1;
-  flex-shrink: 1;
+  max-height: 200px;
   flex-basis: 400px;
 
-  // Keep the images of a given row the same size
-  display: flex; 
-  justify-content: center; 
-  align-items: start; 
-  overflow: hidden; 
+  display: grid;
+  overflow: hidden;
 }
 
-.post-small-meta {
-  font-size: $small-font-size;
-  color: $brand-color;
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-  padding: 5px;
-  background-color: $background-color;
+.post-small-image-picture {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+}
+
+.post-small-image-meta {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+
+  margin: 0.5em;
+
+  display: grid;
+  grid-template-columns: 1fr min-content;
+  justify-content: space-between;
+}
+
+.post-small-image-meta-schedule {
+  grid-column: 1/1;
+  font-size: variables.$small-font-size;
+  color: skin.$brand-color;
+
+  padding: 0.5em;
   border-radius: 5px;
+
+  align-self: start;
+  justify-self: start;
+  background: var(--minima-card-background-color);
+}
+
+.post-small-image-meta-actions {
+  grid-column: 2/2;
 }
 
 .post-small-actions {
   display: flex;
-  justify-self: end;
-  flex-direction: column;
+  justify-content: end;
 
   padding: 1ch;
   gap: 1em;

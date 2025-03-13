@@ -1,19 +1,17 @@
+@use "skins/auto" as skin;
+@use "mixins" as mixins;
+@use "variables" as variables;
+
 /**
  * Site footer
  */
 .site-footer {
-  border-top: 1px solid $border-color-01;
-  padding: $spacing-unit 0;
-}
-
-.footer-description {
-  grid-column: content-start / content-end;
-  grid-row: 1;
+  border-top: 1px solid skin.$border-color-01;
+  padding: 1em 0;
 }
 
 .footer-navigation {
-  grid-column: content-start / content-end;
-  grid-row: 2;
+  grid-column: breakout-start / breakout-end;
 
   display: flex;
   justify-content: center;
@@ -23,10 +21,44 @@
 
 .footer-links {
   grid-column: breakout-start / breakout-end;
-  grid-row: 3;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1em;
+}
+
+.footer-navigation-container {
+
+}
+
+.footer-navigation-header {
+
+}
+
+.footer-navigation-list {
+  margin: 0;
+  list-style: none;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer-navigation-list-item {
+
+}
+
+.footer-navigation-list-item-link {
+  display: flex;
+  gap: 1ch;
+}
+
+.footer-navigation-list-item-link-text {
+
+}
+
+.footer-navigation-list-item-link-icon {
+  margin-top: auto;
+  margin-bottom: auto;
 }

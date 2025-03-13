@@ -1,7 +1,41 @@
 <div class="brand-container">
-    <img src="{{ "/assets/icons/ios/144.png" | relative_url }}" alt="Logo of FAForever" width="48" height=48/>
-  <p class="brand-text-container">
-    <span class="brand-text-name"> Forged Alliance Forever</span>
+  <img class="brand-logo" src="{{ "/assets/favicons/favicon-96x96.png" | relative_url }}" alt="Logo of FAForever" width="48" height=48/>
+  <div class="brand-text-container">
+    <a class="brand-text-name" href="{{ site.data.brand.faforever.url }}" target="_blank"> Forged Alliance Forever</a>
     <span class="brand-text-goal"> The community drive lobby for Supreme Commander: Forged Alliance</span>
-  </p>
+    <ul class="brand-social-media-list">
+      <li class="brand-social-media-list-item">
+        <a
+          href="{{ site.data.brand.discord.url }}"
+          target="_blank"
+          title="Discord">
+          <span class="svg-icon grey icon-discord"></span>
+        </a>
+      </li>
+      <li class="brand-social-media-list-item">
+        <a
+          href="{{ site.data.brand.youtube.url }}"
+          target="_blank"
+          title="YouTube">
+          <span class="svg-icon grey icon-youtube"></span>
+        </a>
+      </li>
+      <li class="brand-social-media-list-item">
+        <a
+          href="{{ site.data.brand.twitch.url }}"
+          target="_blank"
+          title="Twitch">
+          <span class="svg-icon grey icon-twitch"></span>
+        </a>
+      </li>
+      <li class="brand-social-media-list-item">
+        <a
+          href="{{ site.data.brand.twitter.url }}"
+          target="_blank"
+          title="Twitter/X">
+          <span class="svg-icon grey icon-twitter"></span>
+        </a>
+      </li>
+    </ul>
+  </div>
 </div>

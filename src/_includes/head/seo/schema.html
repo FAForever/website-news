@@ -1,0 +1,61 @@
+{% comment %} 
+  
+  Schema.org
+  
+  References:
+  
+  - https://schema.org/
+  
+{% endcomment %}
+
+{% assign url = page.url | default: site.url | absolute_url %}
+{% assign site_name  = site.title %}
+{% assign title = page.title | default: site.title %}
+{% assign logo = "assets/favicons/favicon-96x96.png" | absolute_url  %}
+{% assign description = page.excerpt | default: site.description | strip_html %}
+{% assign image_width = 960 %}
+{% assign image_height = 540 %}
+{% assign image_resolution = image_width | append: "x" | append: image_height  %}
+{% assign image_url = page.image.path | default: "assets/images/default/default-card-image.png" | webp: image_resolution | absolute_url %}
+{% assign image_alt = page.image.alt | default: "TODO: some alternative description of the default image" %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "{{ page.title }}",
+  "author": {
+    "@type": "Organization",
+    "name": "FAForever",
+    "url": "{{ "" | absolute_url }}",
+    "logo": "{{ logo }}",
+    "sameAs": [
+      "https://twitter.com/FAFOfficial_",
+      "https://www.youtube.com/@ForgedAllianceForever",
+      "https://www.twitch.tv/faflive",
+      "https://github.com/FAForever",
+      "https://faforever.com",
+      "https://www.patreon.com/faf",
+      "https://discord.gg/mXahVSKGVb"
+    ]
+  },
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+    {% comment %} 
+        TODO: Technically the date modified field is wrong, and we should compute some modified date depending on the last git commit. Practically however this will be often correct as news items usually do not receive updates.
+    {% endcomment %}
+  "dateModified": "{{ default: page.date | date_to_xmlschema }}",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ url }}"
+  },
+  "image": "{{ image_url }}",
+  "publisher": {
+    "@type": "Organization",
+    "name": "FAForever",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ logo }}"
+    }
+  }
+}
+</script>

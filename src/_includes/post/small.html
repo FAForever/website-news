@@ -3,31 +3,57 @@
   - post: an instance of a post
 {% endcomment %}
 
-<div class="post-small-image-container">
-  {% include components/thumbnail.html path=include.post.image.path alt=include.post.image.alt %}
+<div class="post-card post-debug-container">
+  <div class="post-small-item-container">
+    <div class="post-small-image-container">
+      <div class="post-small-image-picture">
+        {% include components/thumbnail.html path=include.post.image.path alt=include.post.image.alt %}
+      </div>
 
-  {%- if include.post.event -%}
-    <span class="post-regular-meta">
-      {% include post/event/schedule.html event=include.post.event %}
-    </span>
-  {%- endif -%}
-</div>
+      <div class="post-small-image-meta">
+        {%- if include.post.event -%}
+        <div class="post-small-image-meta-schedule">
+            {% include post/event/schedule.html event=include.post.event %}
+          </div>
+        {%- endif -%}
 
-<div class="post-small-text-container">
-  <div class="post-small-text-body-container">
-    <h3 class="post-small-header">{{ include.post.title | escape }}</h3>
+        <div class="post-small-image-meta-actions">
+          {% include components/copy-button.html title=include.post.title description=include.post.excerpt url=include.post.url %}
+        </div>
+      </div>
+    </div>
+
+    <div class="post-small-text-container">
+      <div class="post-small-text-body-container">
+        <div class="post-small-header">
+          <h3 class="post-small-title">     
+            <a class="post-small-link" href="{{ include.post.url | relative_url }}">
+              {{ include.post.title | escape }}    
+            </a>
+          </h3>
+
+          {% include components/url-button.html href=include.post.redirectURL %}
+        </div>
+
+        {% comment %}
+          We can only support so many characters in the overview, therefore we truncate it.
+        {% endcomment %}
+
+        <p class="post-small-excerpt"> 
+          {{ include.post.excerpt | strip_html | truncate: 400 }} 
+        </p>
+      </div>
+    </div>
+  </div>
+
+  {% if jekyll.environment != "production" %}
 
     {% comment %}
-      We can only support so many characters in the overview, therefore we truncate it.
+      This part is only shown while developing
     {% endcomment %}
 
-    <p class="post-small-excerpt"> 
-      {{ include.post.excerpt | strip_html | truncate: 600 }} 
-    </p>
-  </div>
-
-  <div class="post-small-actions">
-    {% include components/copy-button.html data=include.post.redirectURL %}
-    {% include components/url-button.html href=include.post.redirectURL %}
-  </div>
+    <div class="post-debug-content">
+      <p>Priority: {{ include.post.priority | default: 'unknown' }}</p>
+    </div>
+  {% endif %}
 </div>

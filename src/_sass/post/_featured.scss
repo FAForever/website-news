@@ -1,3 +1,7 @@
+@use "skins/auto" as skin;
+@use "mixins" as mixins;
+@use "variables" as variables;
+
 .post-featured-container {
   display: flex;
 }
@@ -8,7 +12,7 @@
   grid-template-rows: 1fr min-content;
   grid-template-columns: 1;
 
-  @media (min-width: $on-medium) {
+  @media (min-width: variables.$on-medium) {
     grid-template-rows: 1;
     grid-template-columns: 1fr 1fr;
   }
@@ -36,13 +40,13 @@
 }
 
 .post-featured-meta {
-  font-size: $small-font-size;
-  color: $brand-color;
+  font-size: variables.$small-font-size;
+  color: skin.$brand-color;
   position: absolute;
   bottom: 10px;
   left: 10px;
   padding: 5px;
-  background-color: $background-color;
+  background-color: skin.$background-color;
   border-radius: 5px;
 }
 

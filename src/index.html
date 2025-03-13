@@ -19,12 +19,10 @@ layout: base
 
 <section class="wrapper wrapper-body">
   <section class="top-container">
-    <div class="post-featured-container">
       {%- if featuredLivePosts.size > 0 -%}
         {% assign featuredLivePost = featuredLivePosts | first %}
         {% include post/featured.html post=featuredLivePost %}
       {%- endif -%}
-    </div>
     <div class="post-event-container ">
       <ul class="post-event-list post-card">
         {%- for postEvent in eventLivePosts -%}
@@ -46,7 +44,7 @@ layout: base
   {%- if regularLivePosts.size > 0 -%}
     <ul class="post-small-item-list-container">
       {%- for post in regularLivePosts -%}
-        <li class="post-small-item-container post-card">
+        <li>
           {% include post/small.html post=post %}
         </li>
       {%- endfor -%}

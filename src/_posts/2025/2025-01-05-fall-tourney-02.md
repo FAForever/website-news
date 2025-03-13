@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Fall tourney 2024
+title: Fall tourney 2032
 date: 2025-01-05 12:00:00 +0100
 categories: tournament
 type: regular

@@ -1,5 +1,9 @@
+@use "skins/auto" as skin;
+@use "mixins" as mixins;
+@use "variables" as variables;
+
 html {
-  font-size: $base-font-size;
+  font-size: variables.$base-font-size;
 }
 
 /**
@@ -29,9 +33,9 @@ figure {
  * Basic styling
  */
 body {
-  font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
-  color: $text-color;
-  background-color: $background-color;
+  font: variables.$base-font-weight #{variables.$base-font-size}/#{variables.$base-line-height} variables.$base-font-family;
+  color: skin.$text-color;
+  background-color: skin.$background-color;
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
   -moz-font-feature-settings: "kern" 1;
@@ -61,12 +65,12 @@ ol,
 dl,
 figure,
 %vertical-rhythm {
-  margin-bottom: $spacing-unit * 0.5;
+  margin-bottom: variables.$spacing-unit * 0.5;
 }
 
 hr {
-  margin-top: $spacing-unit;
-  margin-bottom: $spacing-unit;
+  margin-top: variables.$spacing-unit;
+  margin-bottom: variables.$spacing-unit;
 }
 
 /**
@@ -93,7 +97,7 @@ figure > img {
 }
 
 figcaption {
-  font-size: $small-font-size;
+  font-size: variables.$small-font-size;
 }
 
 /**
@@ -101,7 +105,7 @@ figcaption {
  */
 ul,
 ol {
-  margin-left: $spacing-unit;
+  margin-left: variables.$spacing-unit;
 }
 
 li {
@@ -120,22 +124,22 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: $base-font-weight;
+  font-weight: variables.$base-font-weight;
 }
 
 /**
  * Links
  */
 a {
-  color: $link-base-color;
+  color: skin.$link-base-color;
   text-decoration: none;
 
   &:visited {
-    color: $link-visited-color;
+    color: skin.$link-visited-color;
   }
 
   &:hover {
-    color: $link-hover-color;
+    color: skin.$link-hover-color;
     text-decoration: underline;
   }
 
@@ -152,10 +156,10 @@ a {
  * Blockquotes
  */
 blockquote {
-  color: $brand-color;
-  border-left: 4px solid $border-color-01;
-  padding-left: $spacing-unit * 0.5;
-  @include relative-font-size(1.125);
+  color: skin.$brand-color;
+  border-left: 4px solid skin.$border-color-01;
+  padding-left: variables.$spacing-unit * 0.5;
+  @include mixins.relative-font-size(1.125);
   font-style: italic;
 
   > :last-child {
@@ -173,11 +177,11 @@ blockquote {
  */
 pre,
 code {
-  font-family: $code-font-family;
+  font-family: variables.$code-font-family;
   font-size: 0.9375em;
-  border: 1px solid $border-color-01;
+  border: 1px solid skin.$border-color-01;
   border-radius: 3px;
-  background-color: $code-background-color;
+  background-color: skin.$code-background-color;
 }
 
 code {
@@ -197,11 +201,11 @@ pre {
 
 .highlight {
   border-radius: 3px;
-  background: $code-background-color;
+  background: skin.$code-background-color;
   @extend %vertical-rhythm;
 
   .highlighter-rouge & {
-    background: $code-background-color;
+    background: skin.$code-background-color;
   }
 }
 
@@ -230,29 +234,29 @@ pre {
  * Tables
  */
 table {
-  margin-bottom: $spacing-unit;
+  margin-bottom: variables.$spacing-unit;
   width: 100%;
-  text-align: $table-text-align;
-  color: $table-text-color;
+  text-align: variables.$table-text-align;
+  color: skin.$table-text-color;
   border-collapse: collapse;
-  border: 1px solid $table-border-color;
+  border: 1px solid skin.$table-border-color;
   tr {
     &:nth-child(even) {
-      background-color: $table-zebra-color;
+      background-color: skin.$table-zebra-color;
     }
   }
   th,
   td {
-    padding: $spacing-unit * 33.3333333333;
+    padding: variables.$spacing-unit * 33.3333333333;
   }
   th {
-    background-color: $table-header-bg-color;
-    border: 1px solid $table-header-border;
+    background-color: skin.$table-header-bg-color;
+    border: 1px solid skin.$table-header-border;
   }
   td {
-    border: 1px solid $table-border-color;
+    border: 1px solid skin.$table-border-color;
   }
-  @include media-query($on-laptop) {
+  @include mixins.media-query(variables.$on-laptop) {
     display: block;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;

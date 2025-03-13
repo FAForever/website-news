@@ -1,13 +1,18 @@
 .brand-container {
   display: flex;
   flex-direction: row;
+  align-items: start;
   gap: 1em;
-  height: 48px;
 }
 
 .brand-logo {
   width: 48px;
   height: 48px;
+
+  filter: invert(100);
+  @media (prefers-color-scheme: light) {
+    filter: none();
+  }
 }
 
 .brand-text-container {
@@ -21,4 +26,34 @@
 .brand-text-goal {
   font-size: 0.75rem;
   color: grey;
+}
+
+.brand-social-media-list {
+  margin: 0;
+  list-style: none;
+
+  display: flex;
+  flex-direction: row;
+  gap: 1ch;
+}
+
+.brand-social-media-list-item {
+  float: left;
+  border: 1px solid transparent;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+
+  &:hover {
+    border: 1px solid var(--minima-border-color-01);
+  }
+
+  a {
+    display: block;
+    padding: 4px;
+    &:hover {
+      border-color: var(--minima-border-color-02);
+    }
+  }
 }

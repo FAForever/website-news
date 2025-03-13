@@ -17,14 +17,15 @@
     href="{{ "/assets/favicons/apple-touch-icon.png" | relative_url }}">
 
   <meta name="apple-mobile-web-app-title" content="News of FAForever">
-
+  <meta name="color-scheme" content="dark light" />
+  
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
 
-  {%- seo -%}
+  {%- include head/seo.html -%}
 
   {%- feed_meta -%}
 

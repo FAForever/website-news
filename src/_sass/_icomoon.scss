@@ -28,6 +28,15 @@
 /* When updating, override the following section and leave everything else   */
 /* intact!                                                                   */
 
+
+.icon-rss:before {
+  content: "\e907";
+  color: #ffa500;
+}
+.icon-instagram:before {
+  content: "\e906";
+  color: #e4405f;
+}
 .icon-github:before {
   content: "\e905";
 }
@@ -53,8 +62,23 @@
   content: "\e902";
   color: #7289da;
 }
+.icon-pacman:before {
+  content: "\e916";
+}
+.icon-book:before {
+  content: "\e91f";
+}
+.icon-file-picture:before {
+  content: "\e927";
+}
 .icon-copy:before {
   content: "\e92c";
+}
+.icon-credit-card:before {
+  content: "\e93f";
+}
+.icon-map2:before {
+  content: "\e94c";
 }
 .icon-users:before {
   content: "\e972";
@@ -62,11 +86,20 @@
 .icon-trophy:before {
   content: "\e99e";
 }
+.icon-play2:before {
+  content: "\ea15";
+}
 .icon-new-tab:before {
   content: "\ea7e";
 }
 .icon-embed2:before {
   content: "\ea80";
+}
+.icon-share2:before {
+  content: "\ea82";
+}
+.icon-rss2:before {
+  content: "\ea9c";
 }
 .icon-deviantart:before {
   content: "\eaaa";

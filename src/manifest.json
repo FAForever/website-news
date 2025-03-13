@@ -6,14 +6,14 @@
 ---
 
 {
-  "name": "Newshub of FAForever",
-  "short_name": "Newshub",
+  "name": "News of FAForever",
+  "short_name": "News of FAForever",
   "theme_color": "#2196f3",
   "background_color": "#2196f3",
   "display": "standalone",
   "scope": "{{ site.baseurl }}/",
   "start_url": "{{ site.baseurl }}/",
-  "description": "Newshub for FAForever ",
+  "description": "News of FAForever ",
   "icons": [
     {
       "src": "{{ '/assets/icons/windows11/SmallTile.scale-100.png' | relative_url }} ",

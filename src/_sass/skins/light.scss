@@ -1,11 +1,13 @@
 @charset "utf-8";
 
+@use "sass:color";
+
 // Light mode
 // ----------
 
 $lm-brand-color: #828282 !default;
-$lm-brand-color-light: lighten($lm-brand-color, 40%) !default;
-$lm-brand-color-dark: darken($lm-brand-color, 25%) !default;
+$lm-brand-color-light: color.adjust($lm-brand-color, $lightness: 40%) !default;
+$lm-brand-color-dark: color.adjust($lm-brand-color, $lightness: -25%) !default;
 
 $lm-site-title-color: $lm-brand-color-dark !default;
 
@@ -15,17 +17,17 @@ $lm-card-background-color: #fefefe !default;
 $lm-code-background-color: #eeeeff !default;
 
 $lm-link-base-color: #2a7ae2 !default;
-$lm-link-visited-color: darken($lm-link-base-color, 15%) !default;
+$lm-link-visited-color: color.adjust($lm-link-base-color, $lightness: -15%) !default;
 $lm-link-hover-color: $lm-text-color !default;
 
 $lm-border-color-01: $lm-brand-color-light !default;
-$lm-border-color-02: lighten($lm-brand-color, 35%) !default;
+$lm-border-color-02: color.adjust($lm-brand-color, $lightness: 35%) !default;
 $lm-border-color-03: $lm-brand-color-dark !default;
 
-$lm-table-text-color: lighten($lm-text-color, 18%) !default;
-$lm-table-zebra-color: lighten($lm-brand-color, 46%) !default;
-$lm-table-header-bg-color: lighten($lm-brand-color, 43%) !default;
-$lm-table-header-border: lighten($lm-brand-color, 37%) !default;
+$lm-table-text-color: color.adjust($lm-text-color, $lightness: 18%) !default;
+$lm-table-zebra-color: color.adjust($lm-brand-color, $lightness: 46%) !default;
+$lm-table-header-bg-color: color.adjust($lm-brand-color, $lightness: 43%) !default;
+$lm-table-header-border: color.adjust($lm-brand-color, $lightness: 37%) !default;
 $lm-table-border-color: $lm-border-color-01 !default;
 
 // Syntax highlighting styles should be adjusted appropriately for every "skin"

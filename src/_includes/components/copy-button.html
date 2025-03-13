@@ -1,10 +1,12 @@
 {% comment %} 
        
 Input parameters: 
-- data: the data to copy to clipboard
+- url: the URL to share
+- title: the title of the content to share
+- description: the description of the content to share
         
 {% endcomment %}
 
 <abbr title="Click to copy">
-    <button class="copy-button" data-clipboard-text="{{ include.data }}" type="button"> <span class="icon-copy"></span> </button>
+    <button class="copy-button" data-share-description="{{ include.description |  strip_html }}" data-share-title="{{ include.title |  strip_html }}" data-share-url="{{ include.url }}" type="button"> <span class="icon-share2"></span> </button>
 </abbr>
