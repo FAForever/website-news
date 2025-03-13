@@ -21,5 +21,5 @@ Throughout these pages we'll assume that the audience has little to no technical
 And various additional guidelines:
 
 - [Appendix - about images](/contributing/images-and-thumbnails)
-- [Appendix - about icons (through IcoMoon)](/contributing/images-and-thumbnails)
+- [Appendix - about icons (through IcoMoon)](/contributing/icomoon)
 - [Appendix - Introduction to Visual Studio Code](/contributing/visual-studio-code)
