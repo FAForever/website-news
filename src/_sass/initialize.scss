@@ -1,48 +1,28 @@
 @charset "utf-8";
 
-// Define defaults for each variable.
+@use "variables";
+@use "mixins";
 
-$base-font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Segoe UI Emoji", "Segoe UI Symbol", "Apple Color Emoji", Roboto, Helvetica, Arial,
-  sans-serif !default;
-$code-font-family: "Menlo", "Inconsolata", "Consolas", "Roboto Mono", "Ubuntu Mono", "Liberation Mono", "Courier New", monospace;
-$base-font-size: 16px !default;
-$base-font-weight: 400 !default;
-$small-font-size: $base-font-size * 0.875 !default;
-$base-line-height: 1.5 !default;
+@use "normalize";
+@use "base";
 
-$spacing-unit: 30px !default;
+@use "icomoon";
 
-$table-text-align: left !default;
+@use "header";
+@use "footer";
+@use "wrapper";
+@use "layout";
 
-// Width of the content area
-$content-width: 1200px !default;
+@use "post/featured";
+@use "post/small";
+@use "post/event";
+@use "post/page";
+@use "post/common";
+@use "components/copy-button";
+@use "components/url-button";
+@use "components/brand";
+@use "components/divider";
+@use "components/banner";
+@use "components/thumbnail";
+@use "components/socials";
 
-$on-palm: 1024px !default;
-$on-laptop: 1200px !default;
-
-$on-medium: $on-palm !default;
-$on-large: $on-laptop !default;
-
-// Use media queries like this:
-// @include media-query($on-palm) {
-// .wrapper {
-// padding-right: $spacing-unit / 2;
-// padding-left: $spacing-unit / 2;
-// }
-// }
-// Notice the following mixin uses max-width, in a deprecated, desktop-first
-// approach, whereas media queries used elsewhere now use min-width.
-@mixin media-query($device) {
-  @media screen and (max-width: $device) {
-    @content;
-  }
-}
-
-@mixin relative-font-size($ratio) {
-  font-size: #{$ratio}rem;
-}
-
-@import // Hook to override predefined variables.
-  "normalize",
-  "base", "header", "footer", "wrapper", "layout", "icomoon", "post/featured", "post/small", "post/event", "post/page", "post/common",
-  "components/copy-button", "components/url-button", "components/brand", "components/divider", "components/banner", "components/thumbnail", "components/socials";

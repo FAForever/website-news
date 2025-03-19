@@ -10,6 +10,10 @@ group :jekyll_plugins do
 
   gem "jekyll-feed"
 
+  # Used to generate a table of contents
+  # - https://github.com/toshimaru/jekyll-toc
+  gem 'jekyll-toc'
+
   # Used to provide us with the capability to redirect users. 
   # - https://github.com/jekyll/jekyll-redirect-from
 
@@ -39,6 +43,7 @@ group :jekyll_plugins do
   # - https://github.com/Garanas/jekyll-transcode-image-filters
 
   gem 'jekyll-transcode-image-filters', git: "https://github.com/Garanas/jekyll-transcode-image-filters"
+  gem "benchmark"
 
   # Used to generate RFC5545 compatible feeds for calendars
   # - https://github.com/Garanas/jekyll-icalendar-feed

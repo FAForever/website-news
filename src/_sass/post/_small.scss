@@ -1,3 +1,7 @@
+@use "skins/auto" as skin;
+@use "mixins" as mixins;
+@use "variables" as variables;
+
 .post-small-item-list-container {
   grid-column: breakout-start / breakout-end;
   grid-row: 2/2;
@@ -5,20 +9,22 @@
   margin: 0;
   list-style: none;
 
-
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-  gap: 1rem;
-
+  grid-template-columns: repeat(auto-fit, minmax(var(--post-card-width), 1fr));
   gap: 1em;
 }
 
 .post-small-item-container {
+
+  min-width: var(--post-card-width);
+  max-width: calc(var(--post-card-width) * 2);
+  
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   align-content: flex-start;
-  gap: 0.5rem 1rem;
+
+  height: 100%;
 
   &:focus-within {
     border: 1px solid var(--minima-border-color-02);
@@ -32,9 +38,7 @@
   justify-content: space-between;
   flex-direction: column;
 
-  padding-top: 0.75em;
-  padding-left: 0.75em;
-  padding-right: 0.75em;
+padding: 1em;
 }
 
 .post-small-text-body-container {
@@ -44,12 +48,26 @@
   gap: 0.5rem 1rem;
 }
 
+.post-small-title {
+  margin: 0;
+}
+
+.post-small-link {
+  color: var(--minima-text-color);
+
+  &:visited {
+    color: var(--minima-text-color);
+  }
+}
+
 .post-small-header {
-  margin: 0
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .post-small-excerpt {
-  margin: 0
+  margin: 0;
 }
 
 .post-small-image-container {
@@ -78,8 +96,8 @@
 
 .post-small-image-meta-schedule {
   grid-column: 1/1;
-  font-size: $small-font-size;
-  color: $brand-color;
+  font-size: variables.$small-font-size;
+  color: skin.$brand-color;
 
   padding: 0.5em;
   border-radius: 5px;

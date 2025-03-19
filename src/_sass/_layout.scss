@@ -1,3 +1,7 @@
+@use "skins/auto" as skin;
+@use "mixins" as mixins;
+@use "variables" as variables;
+
 /**
  * Page content
  */
@@ -6,43 +10,43 @@
 }
 
 .page-heading {
-  @include relative-font-size(2);
+  @include mixins.relative-font-size(2);
 }
 
 .post-list-heading {
-  @include relative-font-size(1.75);
+  @include mixins.relative-font-size(1.75);
 }
 
 .post-meta {
-  font-size: $small-font-size;
-  color: $brand-color;
+  font-size: variables.$small-font-size;
+  color: skin.$brand-color;
 }
 
 .post-link {
   display: block;
-  @include relative-font-size(1.5);
+  @include mixins.relative-font-size(1.5);
 }
 
 /**
  * Posts
  */
 .post-header {
-  margin-bottom: $spacing-unit;
+  margin-bottom: variables.$spacing-unit;
 }
 
 .post-title,
 .post-content h1 {
-  @include relative-font-size(2.625);
+  @include mixins.relative-font-size(2.625);
   letter-spacing: -1px;
   line-height: 1.15;
 
-  @media screen and (min-width: $on-large) {
-    @include relative-font-size(2.625);
+  @media screen and (min-width: variables.$on-large) {
+    @include mixins.relative-font-size(2.625);
   }
 }
 
 .post-content {
-  margin-bottom: $spacing-unit;
+  margin-bottom: variables.$spacing-unit;
 
   h1,
   h2,
@@ -50,34 +54,34 @@
   h4,
   h5,
   h6 {
-    margin-top: $spacing-unit;
+    margin-top: variables.$spacing-unit;
   }
 
   h2 {
-    @include relative-font-size(1.75);
+    @include mixins.relative-font-size(1.75);
 
-    @media screen and (min-width: $on-large) {
-      @include relative-font-size(2);
+    @media screen and (min-width: variables.$on-large) {
+      @include mixins.relative-font-size(2);
     }
   }
 
   h3 {
-    @include relative-font-size(1.375);
+    @include mixins.relative-font-size(1.375);
 
-    @media screen and (min-width: $on-large) {
-      @include relative-font-size(1.625);
+    @media screen and (min-width: variables.$on-large) {
+      @include mixins.relative-font-size(1.625);
     }
   }
 
   h4 {
-    @include relative-font-size(1.25);
+    @include mixins.relative-font-size(1.25);
   }
 
   h5 {
-    @include relative-font-size(1.125);
+    @include mixins.relative-font-size(1.125);
   }
   h6 {
-    @include relative-font-size(1.0625);
+    @include mixins.relative-font-size(1.0625);
   }
 }
 
@@ -85,8 +89,7 @@
  * Pagination navbar
  */
 .pagination {
-  margin-bottom: $spacing-unit;
-  @extend .social-media-list;
+  margin-bottom: variables.$spacing-unit;
   li {
     a,
     div {
@@ -96,11 +99,11 @@
     }
     div {
       display: block;
-      padding: $spacing-unit * 0.25;
+      padding: variables.$spacing-unit * 0.25;
       border: 1px solid transparent;
 
       &.pager-edge {
-        color: $border-color-01;
+        color: skin.$border-color-01;
         border: 1px dashed;
       }
     }
@@ -110,9 +113,9 @@
 /**
  * Grid helpers
  */
-@media screen and (min-width: $on-large) {
+@media screen and (min-width: variables.$on-large) {
   .one-half {
-    width: calc(50% - (#{$spacing-unit} / 2));
+    width: calc(50% - (#{variables.$spacing-unit} / 2));
   }
 }
 
@@ -126,7 +129,7 @@
   grid-template-rows: 1fr min-content;
   grid-template-columns: 1fr;
 
-  @media (min-width: $on-medium) {
+  @media (min-width: variables.$on-medium) {
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 400px;
   }

@@ -1,0 +1,64 @@
+# The main purpose of the custom image in this repository is to reduce the time
+# that it takes to start developing. This is not just about the tool chain, it is
+# also about related packages and gems. We need to keep the image up to date.
+
+# With this workflow we automate the suggestion to create a new release whenever
+# there are changes in the dependencies of the project.
+
+name: Docker - Release suggestion
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      # represent reasons when we should do a release to update the docker image
+      # when dependencies change then
+      - "Gemfile"
+      - "Gemfile.lock"
+
+      # when docker related files change
+      - "Dockerfile"
+      - ".dockeringore"
+      - "compose.yaml"
+
+      # when docker related workflows change
+      - ".github/workflows/docker-build.yaml"
+      - ".github/workflows/docker-draft-release.yaml"
+
+jobs:
+  suggest-release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          # only checkout the root
+          sparse-checkout: .
+
+          # fetch all tags to bump the latest tag
+          fetch-depth: 0
+          fetch-tags: true
+
+      - name: Extract latest tag
+        run: |
+          TAG=$(git describe --tags --abbrev=0 || echo "v0.0.0")
+          echo "LATEST_TAG=$TAG" >> $GITHUB_ENV
+
+      - name: Generate new major version number
+        run: |
+          LATEST="${{ env.LATEST_TAG }}"
+          NEW_VERSION=$(echo "$LATEST" | awk -F. -v OFS=. '{$1 += 1; $2=0; $3=0; print}')
+          echo "NEW_VERSION=$NEW_VERSION" >> $GITHUB_ENV
+
+      - name: Create a draft release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ env.NEW_VERSION }}
+          name: "Release ${{ env.NEW_VERSION }}"
+          draft: true
+          generate_release_notes: true

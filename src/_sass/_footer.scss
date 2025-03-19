@@ -1,13 +1,17 @@
+@use "skins/auto" as skin;
+@use "mixins" as mixins;
+@use "variables" as variables;
+
 /**
  * Site footer
  */
 .site-footer {
-  border-top: 1px solid $border-color-01;
-  padding: $spacing-unit 0;
+  border-top: 1px solid skin.$border-color-01;
+  padding: 1em 0;
 }
 
 .footer-navigation {
-  grid-column: breakout-start / breakout-end;
+  grid-column: content-start / content-end;
 
   display: flex;
   justify-content: center;
@@ -16,7 +20,7 @@
 }
 
 .footer-links {
-  grid-column: breakout-start / breakout-end;
+  grid-column: content-start / content-end;
 
   display: flex;
   justify-content: space-between;
@@ -25,11 +29,12 @@
 }
 
 .footer-navigation-container {
-
+  min-width: 140px;
 }
 
 .footer-navigation-header {
-
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .footer-navigation-list {
@@ -55,6 +60,7 @@
 }
 
 .footer-navigation-list-item-link-icon {
+  display:none;
   margin-top: auto;
   margin-bottom: auto;
 }

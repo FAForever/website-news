@@ -9,7 +9,7 @@ layout: base
 <section class="wrapper">
   <ul class="post-small-item-list-container">
     {% for post in page.posts %}
-      <li class="post-small-item-container post-card">
+      <li>
         {% include post/small.html post=post %}
       </li>
     {% endfor %}

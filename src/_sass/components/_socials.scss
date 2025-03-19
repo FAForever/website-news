@@ -1,3 +1,7 @@
+@use "skins/auto" as skin;
+@use "mixins" as mixins;
+@use "variables" as variables;
+
 .social-media-list {
   
   list-style: none;
@@ -12,14 +16,14 @@
     }
 
     &:hover {
-      border: 1px solid $border-color-01;
+      border: 1px solid skin.$border-color-01;
     }
 
     a {
       display: block;
       padding: 4px;
       &:hover {
-        border-color: $border-color-02;
+        border-color: skin.$border-color-02;
       }
     }
   }

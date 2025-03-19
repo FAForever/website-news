@@ -3,8 +3,7 @@
   - post: an instance of a post 
 {% endcomment %}
 
-
-<div class="post-featured-item-container post-card">
+<div class="post-card post-debug-container post-featured-item-container">
   <div class="post-featured-image-container">
     {% include components/thumbnail.html path=include.post.image.path alt=include.post.image.alt %}
 
@@ -31,4 +30,15 @@
       {% include components/url-button.html href=include.post.redirectURL %}
     </div>
   </div>
+
+  {% if jekyll.environment != "production" %}
+
+    {% comment %}
+      This part is only shown while developing
+    {% endcomment %}
+
+    <div class="post-debug-content">
+      <p>Priority: {{ include.post.priority | default: 'unknown' }}</p>
+    </div>
+  {% endif %}
 </div>
