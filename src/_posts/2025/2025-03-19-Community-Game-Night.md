@@ -14,5 +14,6 @@ image:
     alt: A Cybran ACU playing chess with his UEF friend, with a Game Night sign in the background.
 ---
 
-Join the now well going Community game night. Hop on in the dedicated channel in FAF discord server, and put your vote on the next theme and schedule.
+Every second saturday there is a Community Game Night hosted by Strydxr! Join in and blast some of the contributors of FAForever back to the stone age! Participants gather in a dedicated channel in the FAF Discord server.
+
 <!-- excerpt-end -->
