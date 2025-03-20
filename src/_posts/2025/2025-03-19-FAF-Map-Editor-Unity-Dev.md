@@ -14,6 +14,6 @@ image:
     alt: An image presenting a message of FAF looking for Unity Developers for their map editor. 
 ---
 
-If you are interested in helping of further development of the FAF map editor and have basic experience with Unity, leave a message to BlackYps.
+The official map editor can use a maintainer or two! There's various features that would be of immense value to map authors. At the moment BlackYps is working to implement the advanced terrain shaders in the editor. If you have experience with C# and/or with Unity and you're interested in helping out then reach out to BlackYps on Discord.
 
 <!-- excerpt-end -->
