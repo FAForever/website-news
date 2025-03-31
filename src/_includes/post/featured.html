@@ -3,35 +3,31 @@
   - post: an instance of a post 
 {% endcomment %}
 
-<div class="post-card post-debug-container">
-  <div class="post-featured-container">
-    <div class="post-featured-item-container">
-      <div class="post-featured-image-container">
-        {% include components/thumbnail.html path=include.post.image.path alt=include.post.image.alt %}
+<div class="post-card post-debug-container post-featured-item-container">
+  <div class="post-featured-image-container">
+    {% include components/thumbnail.html path=include.post.image.path alt=include.post.image.alt %}
 
-        {%- if include.post.event -%}
-          <span class="post-featured-meta">
-            {% include post/event/schedule.html event=include.post.event %}
-          </span>
-        {%- endif -%}
-      </div>
-      <div class="post-featured-text-container">
-        <h3 class="post-featured-header">{{ include.post.title | escape }}</h3>
+    {%- if include.post.event -%}
+      <span class="post-featured-meta">
+        {% include post/event/schedule.html event=include.post.event %}
+      </span>
+    {%- endif -%}
+  </div>
+  <div class="post-featured-text-container">
+    <h3 class="post-featured-header">{{ include.post.title | escape }}</h3>
 
-        {% comment %} 
-          We can only support so many characters in the overview, therefore we truncate it. 
-        {% endcomment %}
+    {% comment %} 
+      We can only support so many characters in the overview, therefore we truncate it. 
+    {% endcomment %}
 
-        <span class="post-featured-excerpt">
-          {{ include.post.excerpt | strip_html | truncate: 600 }}
-        </span>
+    <span class="post-featured-excerpt">
+      {{ include.post.excerpt | strip_html | truncate: 600 }}
+    </span>
 
-        <div class="post-featured-actions">
-          {% assign absolute_url_post = include.post.url | absolute_url %}
-          {% include components/copy-button.html title=include.post.title description=include.post.excerpt url=absolute_url_post %}
-          {% include components/url-button.html href=include.post.redirectURL %}
-        </div>
-      </div>
+    <div class="post-featured-actions">
+      {% assign absolute_url_post = include.post.url | absolute_url %}
+      {% include components/copy-button.html title=include.post.title description=include.post.excerpt url=absolute_url_post %}
+      {% include components/url-button.html href=include.post.redirectURL %}
     </div>
   </div>
 

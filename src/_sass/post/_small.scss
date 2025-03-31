@@ -10,11 +10,15 @@
   list-style: none;
 
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(var(--post-card-width), 1fr));
   gap: 1em;
 }
 
 .post-small-item-container {
+
+  min-width: var(--post-card-width);
+  max-width: calc(var(--post-card-width) * 2);
+  
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -49,6 +53,11 @@ padding: 1em;
 }
 
 .post-small-link {
+  color: var(--minima-text-color);
+
+  &:visited {
+    color: var(--minima-text-color);
+  }
 }
 
 .post-small-header {

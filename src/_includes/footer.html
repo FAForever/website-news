@@ -1,5 +1,6 @@
 <footer class="wrapper site-footer h-card">
-  {% comment %} <div class="footer-navigation">
+
+  <div class="footer-navigation">
     <div class="footer-navigation-container">
       
       <h3 class="footer-navigation-header">New players</h3>
@@ -25,7 +26,7 @@
 
 
     <div class="footer-navigation-container">
-      <h3 class="footer-navigation-header">Archive</h3>
+      <h3 class="footer-navigation-header">News</h3>
       <ul class="footer-navigation-list">
         {% for category in site.categories %}
           {% assign slugified = category | first | slugify %}
@@ -36,10 +37,17 @@
             </a>
           </li>
         {% endfor %}
+
+        <li class="footer-navigation-list-item">
+          <a href="{{ 'contributing' | relative_url}}">
+            Contributing
+          </a>
+        </li>
       </ul>
     </div>
 
 
+    {% comment %}  
     <div class="footer-navigation-container">
       <h3 class="footer-navigation-header">Collections</h3>
       <ul class="footer-navigation-list">
@@ -77,6 +85,7 @@
         </li>
       </ul>
     </div>
+  {% endcomment %}
 
     <div class="footer-navigation-container">
       <h3 class="footer-navigation-header">Community</h3>
@@ -104,6 +113,7 @@
       </ul>
     </div>
 
+    {% comment %}  
     <div class="footer-navigation-container">
       <h3 class="footer-navigation-header">Contributing</h3>
       <ul class="footer-navigation-list">
@@ -129,7 +139,9 @@
         </li>
       </ul>
     </div>
-  </div> {% endcomment %}
+    {% endcomment %}
+    
+  </div>
 
   <div class="footer-links">
     {%- include components/brand.html -%}

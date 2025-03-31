@@ -19,3 +19,7 @@ $on-laptop: 1200px !default;
 
 $on-medium: $on-palm !default;
 $on-large: $on-laptop !default;
+
+:root {
+  --post-card-width: 340px;
+}

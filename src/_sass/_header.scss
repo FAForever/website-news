@@ -6,7 +6,7 @@
  * Site header
  */
 .site-header {
-  grid-column: breakout-start / breakout-end;
+  grid-column: content-start / content-end;
 
   display:flex;
   justify-content: space-between;
